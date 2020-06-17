@@ -22,5 +22,9 @@
     <string name="btnSettings">Настройки</string>
     <string name="todo">TODO</string>
     <string name="name_button_back">Готово</string>
+    <string name="TextChangeCity">Выберите город:</string>
+    <string name="extra">Дополнительно</string>
+    <string name="TextShowHumidity">Показывать влажность</string>
+    <string name="TextShowPressure">Показывать давление</string>
 
 </resources>

@@ -1,39 +1,30 @@
 package ru.geekbrains.weather;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+import androidx.appcompat.app.AppCompatActivity;
+
+
+public class Settings extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_settings);
 
-        Button btn = findViewById(R.id.btn_set);
-        btn.setOnClickListener(new View.OnClickListener() {
+
+        Button back_to_main = findViewById(R.id.backToMain);
+        back_to_main.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), Settings.class);
-                startActivity(intent);
+                finish();
             }
         });
-
-        String instanceState;
-        if (savedInstanceState == null){
-            instanceState = "Первый запуск!";
-        }
-        else{
-            instanceState = "Повторный запуск!";
-        }
-        Toast.makeText(getApplicationContext(), instanceState + " - onCreate()", Toast.LENGTH_SHORT).show();
     }
-
 
     @Override
     protected void onStart() {
@@ -42,8 +33,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
-    protected void onRestoreInstanceState(Bundle saveInstanceState){
+    protected void onRestoreInstanceState(Bundle saveInstanceState) {
         super.onRestoreInstanceState(saveInstanceState);
+
+        saveInstanceState.getBoolean("Humidity");
+        saveInstanceState.getBoolean("Pressure");
         Toast.makeText(getApplicationContext(), "Повторный запуск!! - onRestoreInstanceState()", Toast.LENGTH_SHORT).show();
     }
 
@@ -60,8 +54,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
-    protected void onSaveInstanceState(Bundle saveInstanceState){
+    protected void onSaveInstanceState(Bundle saveInstanceState) {
         super.onSaveInstanceState(saveInstanceState);
+        CheckBox humidity = findViewById(R.id.checkboxHumidity);
+        saveInstanceState.putBoolean("Humidity", humidity.isChecked());
+        CheckBox pressure = findViewById(R.id.checkboxPressure);
+        saveInstanceState.putBoolean("Pressure", pressure.isChecked());
         Toast.makeText(getApplicationContext(), "onSaveInstanceState()", Toast.LENGTH_SHORT).show();
     }
 
@@ -82,5 +80,4 @@ public class MainActivity extends AppCompatActivity {
         super.onDestroy();
         Toast.makeText(getApplicationContext(), "onDestroy()", Toast.LENGTH_SHORT).show();
     }
-
 }

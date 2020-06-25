@@ -22,47 +22,42 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical">
+                android:orientation="horizontal">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
+                <TextView
+                    android:id="@+id/fewdate"
+                    android:layout_width="35dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/fewday"
+                    android:textColor="@color/textcolorpanel"
+                    android:textSize="@dimen/textsizepanel" />
+
+                <ImageView
+                    android:id="@+id/fewweather"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/cloudy_sun_small" />
+
+                <TextView
+                    android:id="@+id/fewtemp"
+                    android:layout_width="60dp"
                     android:layout_height="match_parent"
-                    android:orientation="horizontal">
+                    android:text="@string/fewtemp"
+                    android:textColor="@color/textcolorpanel"
+                    android:textSize="@dimen/textsizepanel" />
 
-                    <TextView
-                        android:id="@+id/fewdate"
-                        android:layout_width="35dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="@string/fewday"
-                        android:textColor="@color/textcolorpanel"
-                        android:textSize="@dimen/textsizepanel" />
-
-                    <ImageView
-                        android:id="@+id/fewweather"
-                        android:layout_width="50dp"
-                        android:layout_height="wrap_content"
-                        app:srcCompat="@drawable/cloudy_sun_small" />
-
-                    <TextView
-                        android:id="@+id/fewtemp"
-                        android:layout_width="60dp"
-                        android:layout_height="match_parent"
-                        android:text="@string/fewtemp"
-                        android:textColor="@color/textcolorpanel"
-                        android:textSize="@dimen/textsizepanel" />
-
-                    <TextView
-                        android:id="@+id/fewinfo"
-                        android:layout_width="250dp"
-                        android:layout_height="wrap_content"
-                        android:paddingStart="10px"
-                        android:text="@string/fewweather"
-                        android:textAlignment="center"
-                        android:textColor="@color/textcolorpanel"
-                        android:textSize="@dimen/textsizepanel" />
-                </LinearLayout>
+                <TextView
+                    android:id="@+id/fewinfo"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="10px"
+                    android:text="@string/fewweather"
+                    android:textAlignment="center"
+                    android:textColor="@color/textcolorpanel"
+                    android:textSize="@dimen/textsizepanel" />
             </LinearLayout>
+
         </TableRow>
 
         <TableRow
@@ -73,52 +68,47 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical">
+                android:orientation="horizontal">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
+                <TextView
+                    android:id="@+id/fewdate2"
+                    android:layout_width="35dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:text="@string/fewday2"
+                    android:textColor="@color/textcolorpanel"
+                    android:textSize="@dimen/textsizepanel" />
+
+                <ImageView
+                    android:id="@+id/fewweather2"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/todo"
+                    app:srcCompat="@drawable/cloudy_rain_small" />
+
+                <TextView
+                    android:id="@+id/fewtemp2"
+                    android:layout_width="60dp"
                     android:layout_height="match_parent"
-                    android:orientation="horizontal">
+                    android:text="@string/fewtemp2"
+                    android:textColor="@color/textcolorpanel"
+                    android:textSize="@dimen/textsizepanel" />
 
-                    <TextView
-                        android:id="@+id/fewdate2"
-                        android:layout_width="35dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="left"
-                        android:layout_weight="1"
-                        android:gravity="left"
-                        android:text="@string/fewday2"
-                        android:textColor="@color/textcolorpanel"
-                        android:textSize="@dimen/textsizepanel" />
-
-                    <ImageView
-                        android:id="@+id/fewweather2"
-                        android:layout_width="50dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="left"
-                        android:layout_weight="1"
-                        android:contentDescription="@string/todo"
-                        app:srcCompat="@drawable/cloudy_rain_small" />
-
-                    <TextView
-                        android:id="@+id/fewtemp2"
-                        android:layout_width="60dp"
-                        android:layout_height="match_parent"
-                        android:text="@string/fewtemp2"
-                        android:textColor="@color/textcolorpanel"
-                        android:textSize="@dimen/textsizepanel" />
-
-                    <TextView
-                        android:id="@+id/fewinfo2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingStart="10px"
-                        android:text="@string/fewinfo2"
-                        android:textAlignment="center"
-                        android:textColor="@color/textcolorpanel"
-                        android:textSize="@dimen/textsizepanel" />
-                </LinearLayout>
+                <TextView
+                    android:id="@+id/fewinfo2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="10px"
+                    android:text="@string/fewinfo2"
+                    android:textAlignment="center"
+                    android:textColor="@color/textcolorpanel"
+                    android:textSize="@dimen/textsizepanel" />
             </LinearLayout>
+
         </TableRow>
 
         <TableRow
@@ -129,47 +119,42 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical">
+                android:orientation="horizontal">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
+                <TextView
+                    android:id="@+id/fewdate3"
+                    android:layout_width="35dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/fewday3"
+                    android:textColor="@color/textcolorpanel"
+                    android:textSize="@dimen/textsizepanel" />
+
+                <ImageView
+                    android:id="@+id/fewweather3"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/sun_small" />
+
+                <TextView
+                    android:id="@+id/fewtemp3"
+                    android:layout_width="60dp"
                     android:layout_height="match_parent"
-                    android:orientation="horizontal">
+                    android:text="@string/fewtemp3"
+                    android:textColor="@color/textcolorpanel"
+                    android:textSize="@dimen/textsizepanel" />
 
-                    <TextView
-                        android:id="@+id/fewdate3"
-                        android:layout_width="35dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="@string/fewday3"
-                        android:textColor="@color/textcolorpanel"
-                        android:textSize="@dimen/textsizepanel" />
-
-                    <ImageView
-                        android:id="@+id/fewweather3"
-                        android:layout_width="50dp"
-                        android:layout_height="wrap_content"
-                        app:srcCompat="@drawable/sun_small" />
-
-                    <TextView
-                        android:id="@+id/fewtemp3"
-                        android:layout_width="60dp"
-                        android:layout_height="match_parent"
-                        android:text="@string/fewtemp3"
-                        android:textColor="@color/textcolorpanel"
-                        android:textSize="@dimen/textsizepanel" />
-
-                    <TextView
-                        android:id="@+id/fewinfo3"
-                        android:layout_width="250dp"
-                        android:layout_height="wrap_content"
-                        android:paddingStart="10px"
-                        android:text="@string/fewinfo3"
-                        android:textAlignment="center"
-                        android:textColor="@color/textcolorpanel"
-                        android:textSize="@dimen/textsizepanel" />
-                </LinearLayout>
+                <TextView
+                    android:id="@+id/fewinfo3"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="10px"
+                    android:text="@string/fewinfo3"
+                    android:textAlignment="center"
+                    android:textColor="@color/textcolorpanel"
+                    android:textSize="@dimen/textsizepanel" />
             </LinearLayout>
+
         </TableRow>
 
         <TableRow
@@ -180,47 +165,42 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical">
+                android:orientation="horizontal">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
+                <TextView
+                    android:id="@+id/fewdate4"
+                    android:layout_width="35dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/fewday4"
+                    android:textColor="@color/textcolorpanel"
+                    android:textSize="@dimen/textsizepanel" />
+
+                <ImageView
+                    android:id="@+id/fewweather4"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/cloudy_sun_small" />
+
+                <TextView
+                    android:id="@+id/fewtemp4"
+                    android:layout_width="60dp"
                     android:layout_height="match_parent"
-                    android:orientation="horizontal">
+                    android:text="@string/fewtemp4"
+                    android:textColor="@color/textcolorpanel"
+                    android:textSize="@dimen/textsizepanel" />
 
-                    <TextView
-                        android:id="@+id/fewdate4"
-                        android:layout_width="35dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="@string/fewday4"
-                        android:textColor="@color/textcolorpanel"
-                        android:textSize="@dimen/textsizepanel" />
-
-                    <ImageView
-                        android:id="@+id/fewweather4"
-                        android:layout_width="50dp"
-                        android:layout_height="wrap_content"
-                        app:srcCompat="@drawable/cloudy_sun_small" />
-
-                    <TextView
-                        android:id="@+id/fewtemp4"
-                        android:layout_width="60dp"
-                        android:layout_height="match_parent"
-                        android:text="@string/fewtemp4"
-                        android:textColor="@color/textcolorpanel"
-                        android:textSize="@dimen/textsizepanel" />
-
-                    <TextView
-                        android:id="@+id/fewinfo4"
-                        android:layout_width="250dp"
-                        android:layout_height="wrap_content"
-                        android:paddingStart="10px"
-                        android:text="@string/fewinfo4"
-                        android:textAlignment="center"
-                        android:textColor="@color/textcolorpanel"
-                        android:textSize="@dimen/textsizepanel" />
-                </LinearLayout>
+                <TextView
+                    android:id="@+id/fewinfo4"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="10px"
+                    android:text="@string/fewinfo4"
+                    android:textAlignment="center"
+                    android:textColor="@color/textcolorpanel"
+                    android:textSize="@dimen/textsizepanel" />
             </LinearLayout>
+
         </TableRow>
     </TableLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

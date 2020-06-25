@@ -1,22 +1,34 @@
 package ru.geekbrains.weather;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import ru.geekbrains.weather.databinding.ActivityMainBinding;
+
 
 public class Settings extends AppCompatActivity {
-
+    ActivityMainBinding binding;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_settings);
+        binding = ActivityMainBinding.inflate(LayoutInflater.from(this));
+        setContentView(binding.getRoot());
+        btnGoBack();
 
 
+
+    }
+
+    private void btnGoBack() {
         Button back_to_main = findViewById(R.id.backToMain);
         back_to_main.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -30,6 +42,7 @@ public class Settings extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
         Toast.makeText(getApplicationContext(), "onStart()", Toast.LENGTH_SHORT).show();
+
     }
 
     @Override
@@ -38,19 +51,6 @@ public class Settings extends AppCompatActivity {
 
         saveInstanceState.getBoolean("Humidity");
         saveInstanceState.getBoolean("Pressure");
-        Toast.makeText(getApplicationContext(), "Повторный запуск!! - onRestoreInstanceState()", Toast.LENGTH_SHORT).show();
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-        Toast.makeText(getApplicationContext(), "onResume()", Toast.LENGTH_SHORT).show();
-    }
-
-    @Override
-    protected void onPause() {
-        super.onPause();
-        Toast.makeText(getApplicationContext(), "onPause()", Toast.LENGTH_SHORT).show();
     }
 
     @Override
@@ -61,23 +61,5 @@ public class Settings extends AppCompatActivity {
         CheckBox pressure = findViewById(R.id.checkboxPressure);
         saveInstanceState.putBoolean("Pressure", pressure.isChecked());
         Toast.makeText(getApplicationContext(), "onSaveInstanceState()", Toast.LENGTH_SHORT).show();
-    }
-
-    @Override
-    protected void onStop() {
-        super.onStop();
-        Toast.makeText(getApplicationContext(), "onStop()", Toast.LENGTH_SHORT).show();
-    }
-
-    @Override
-    protected void onRestart() {
-        super.onRestart();
-        Toast.makeText(getApplicationContext(), "onRestart()", Toast.LENGTH_SHORT).show();
-    }
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        Toast.makeText(getApplicationContext(), "onDestroy()", Toast.LENGTH_SHORT).show();
     }
 }

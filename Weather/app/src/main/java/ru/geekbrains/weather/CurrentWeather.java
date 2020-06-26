@@ -13,7 +13,6 @@ import androidx.fragment.app.Fragment;
 import ru.geekbrains.weather.databinding.ActivityMainBinding;
 
 public class CurrentWeather extends Fragment {
-    ActivityMainBinding binding;
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -23,5 +22,4 @@ public class CurrentWeather extends Fragment {
         return view;
 
     }
-
 }

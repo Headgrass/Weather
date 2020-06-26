@@ -13,6 +13,7 @@ import android.widget.Toast;
 import ru.geekbrains.weather.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
+
     ActivityMainBinding binding;
 
     @Override
@@ -22,15 +23,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         btnGo2Activity();
-
-        String instanceState;
-        if (savedInstanceState == null){
-            instanceState = "Первый запуск!";
-        }
-        else{
-            instanceState = "Повторный запуск!";
-        }
-        log(instanceState + " - onCreate()");
     }
 
     private void btnGo2Activity() {
@@ -44,56 +36,4 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-
-    @Override
-    protected void onStart() {
-        super.onStart();
-        log("OnStart()");
-    }
-
-    @Override
-    protected void onRestoreInstanceState(Bundle saveInstanceState){
-        super.onRestoreInstanceState(saveInstanceState);
-       log("onRestoreInstanceState()");
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-        log("OnResume");
-    }
-
-    @Override
-    protected void onPause() {
-        super.onPause();
-       log("OnPause()");
-    }
-
-    @Override
-    protected void onSaveInstanceState(Bundle saveInstanceState){
-        super.onSaveInstanceState(saveInstanceState);
-        log("OnSaveInstanceState()");
-    }
-
-    @Override
-    protected void onStop() {
-        super.onStop();
-        log("onStop()");
-    }
-
-    @Override
-    protected void onRestart() {
-        super.onRestart();
-        log("onRestart()");
-    }
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        log("OnDestroy()");
-    }
-
-    private void log (String message){
-        Toast.makeText(getApplicationContext(), message, Toast.LENGTH_SHORT).show();
-    }
 }

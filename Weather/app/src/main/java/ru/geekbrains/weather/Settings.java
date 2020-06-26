@@ -2,6 +2,7 @@ package ru.geekbrains.weather;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
@@ -16,6 +17,7 @@ import ru.geekbrains.weather.databinding.ActivityMainBinding;
 
 
 public class Settings extends AppCompatActivity {
+
     ActivityMainBinding binding;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,8 +29,8 @@ public class Settings extends AppCompatActivity {
 
 
     }
-
     private void btnGoBack() {
+       final EditText editCity = findViewById(R.id.editCity);
         Button back_to_main = findViewById(R.id.backToMain);
         back_to_main.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -38,17 +40,10 @@ public class Settings extends AppCompatActivity {
         });
     }
 
-    @Override
-    protected void onStart() {
-        super.onStart();
-        Toast.makeText(getApplicationContext(), "onStart()", Toast.LENGTH_SHORT).show();
-
-    }
 
     @Override
     protected void onRestoreInstanceState(Bundle saveInstanceState) {
         super.onRestoreInstanceState(saveInstanceState);
-
         saveInstanceState.getBoolean("Humidity");
         saveInstanceState.getBoolean("Pressure");
     }

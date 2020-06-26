@@ -1,45 +1,60 @@
 package ru.geekbrains.weather;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Parcelable;
-import android.view.LayoutInflater;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import ru.geekbrains.weather.databinding.ActivityMainBinding;
-
-
 public class Settings extends AppCompatActivity {
+    private String city;
 
-    ActivityMainBinding binding;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = ActivityMainBinding.inflate(LayoutInflater.from(this));
-        setContentView(binding.getRoot());
+        setContentView(R.layout.activity_settings);
+        changeCityMethod();
         btnGoBack();
-
-
-
     }
-    private void btnGoBack() {
-       final EditText editCity = findViewById(R.id.editCity);
-        Button back_to_main = findViewById(R.id.backToMain);
-        back_to_main.setOnClickListener(new View.OnClickListener() {
+
+    private void changeCityMethod() {
+        ((EditText) findViewById(R.id.editCity)).addTextChangedListener(new TextWatcher() {
             @Override
-            public void onClick(View v) {
-                finish();
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                city = s.toString();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
             }
         });
     }
 
+    private void btnGoBack() {
+        Button back_to_main = findViewById(R.id.backToMain);
+        back_to_main.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent();
+                intent.putExtra(Constants.ARG_1, city);
+                setResult(Activity.RESULT_OK, intent);
+                finish();
+            }
+        });
+    }
 
     @Override
     protected void onRestoreInstanceState(Bundle saveInstanceState) {

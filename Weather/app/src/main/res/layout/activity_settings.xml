@@ -22,8 +22,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
+        android:hint="@string/input_city_text"
         android:inputType="textPersonName"
-        android:text="введите город"
         app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintTop_toBottomOf="@+id/ch_City" />
 
@@ -33,7 +33,7 @@
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintTop_toBottomOf="@+id/editCity"
-        tools:ignore="MissingConstraints" />
+        />
 
     <TextView
         android:id="@+id/parameters"

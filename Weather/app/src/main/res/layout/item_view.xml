@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    android:orientation="horizontal"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <TextView
+        android:id="@+id/fewDay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="day" />
+
+    <ImageView
+        android:id="@+id/fewImg"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        app:layout_constraintStart_toEndOf="@+id/fewDay"
+        app:layout_constraintTop_toTopOf="@+id/fewDay"
+        app:srcCompat="@drawable/cloudy_rain_small" />
+
+    <TextView
+        android:id="@+id/fewTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="fewTemp"
+        app:layout_constraintStart_toEndOf="@+id/fewImg"
+        app:layout_constraintTop_toTopOf="@+id/fewImg" />
+
+    <TextView
+        android:id="@+id/fewTempCelsium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="°C"
+        app:layout_constraintStart_toEndOf="@+id/fewTemp"
+        app:layout_constraintTop_toTopOf="@+id/fewTemp" />
+
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/description"
+        app:layout_constraintStart_toEndOf="@+id/fewTempCelsium"
+        app:layout_constraintTop_toTopOf="@+id/fewTempCelsium" />
+</LinearLayout>

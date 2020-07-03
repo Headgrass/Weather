@@ -2,6 +2,8 @@ package ru.geekbrains.weather;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -10,6 +12,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+
+import java.util.Arrays;
+import java.util.List;
 
 import ru.geekbrains.weather.databinding.ActivityMainBinding;
 
@@ -21,6 +26,24 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityMainBinding.inflate(LayoutInflater.from(this));
         setContentView(binding.getRoot());
+
+        List<WeatherData> list = Arrays.asList(
+                new WeatherData("ПН", R.drawable.cloudy_rain_small, 16, "облачно с дождем"),
+                new WeatherData("ВТ", R.drawable.cloudy_sun_small, 19, "тучки и солнечно"),
+                new WeatherData("СР", R.drawable.sun_small, 21, "очень солнечно"),
+                new WeatherData("ЧТ", R.drawable.sun_small, 22, "очень солнечно"),
+                new WeatherData("ПТ", R.drawable.cloudy_sun_small, 18, "тучки и солнечно"),
+                new WeatherData("СБ", R.drawable.cloudy_rain_small, 20, "дождливо"),
+                new WeatherData("ВС", R.drawable.sun_small, 22, "солнечно")
+        );
+
+        SimpleAdapter adapter = new SimpleAdapter();
+        RecyclerView rv = (RecyclerView) findViewById(R.id.recycleview);
+        rv.setHasFixedSize(true);
+        rv.setLayoutManager(new LinearLayoutManager(this));
+        rv.setAdapter(adapter);
+
+        //adapter.setData(list);
 
         btnGo2Activity();
     }

@@ -33,7 +33,8 @@
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintTop_toBottomOf="@+id/editCity"
-        />
+        tools:listitem="@layout/item_view"
+        tools:itemCount="5"/>
 
     <TextView
         android:id="@+id/parameters"

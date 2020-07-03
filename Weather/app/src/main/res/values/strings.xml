@@ -1,10 +1,10 @@
 <resources>
-    <string name="app_name">WeatherApp</string>
+    <string name="app_name">Weather</string>
     <string name="city">Новосибирск</string>
-    <string name="currDate">ВС, 03.05</string>
+    <string name="currDate">ВС, 21.06</string>
     <string name="currInfo">Солнце и облачно</string>
     <string name="emtyImg">Weather Image</string>
-    <string name="current_temp">15°C</string>
+    <string name="current_temp">20°C</string>
     <string name="weather_image">Weather Image</string>
     <string name="fewday">ВС</string>
     <string name="fewtemp">15°C</string>
@@ -18,9 +18,16 @@
     <string name="fewday4">СР</string>
     <string name="fewtemp4">16°C</string>
     <string name="fewinfo4">Солнечно и тучи</string>
-    <string name="likeInfo">Интересный факт о сегодняшнем дне:\nВ 1904 году американский изобретатель Джордж Паркер (George Parker) запатентовал свою первую письменную ручку.</string>
+    <string name="likeInfo">Интересный факт о сегодняшнем дне:\nВ Москве открыто регулярное таксомоторное движение.</string>
     <string name="btnSettings">Настройки</string>
     <string name="todo">TODO</string>
     <string name="name_button_back">Готово</string>
+    <string name="TextChangeCity">Выберите город:</string>
+    <string name="extra">Дополнительно</string>
+    <string name="TextShowHumidity">Показывать влажность</string>
+    <string name="TextShowPressure">Показывать давление</string>
+    <string name="input_city_text">Введите город</string>
+    <string name="fewcity">fewCity</string>
+    <string name="description">description</string>
 
 </resources>
